@@ -8,11 +8,14 @@
   <title>Penny</title>
 </head>
 <body>
+
   <header>
     <h1>Penny</h1>
   </header>
+
   <div class="container">
-    <table id="assets">
+
+    <table id="assets" class="table03">
       <th>Assets BIE</th>
       <tr>
         <td>Savings</td>
@@ -26,8 +29,8 @@
       </tr>
       <tr>
         <td>Equity</td>
-        <td>Ttwo</td>
-        <td class="value">612.87</td>
+        <td class="symbol" id="symbol01">Ttwo</td>
+        <td class="value" id="symbol01-value">612.87</td>
       </tr>
       <tr class="bottomline">
         <td>Total Assets BIE</td>
@@ -36,7 +39,7 @@
       </tr>
     </table>
 
-    <table id="investment-deductions">
+    <table id="investment-deductions" class="table02">
       <th>Investments Deductions</th>
       <tr>
         <td>Savings To Investments</td>
@@ -52,7 +55,7 @@
       </tr>
     </table>
 
-    <table id="fixed-expenses">
+    <table id="fixed-expenses" class="table02">
       <th>Fixed Expenses</th>
       <tr>
         <td>Rent</td>
@@ -72,7 +75,7 @@
       </tr>
     </table>
 
-    <table id="totals">
+    <table id="totals" class="table02">
       <tr class="bottomline">
         <td>Total Savings</td>
         <td class="value">1600</td>
@@ -91,17 +94,20 @@
       </tr>
     </table>
 
-    <form id="transfer">
-      <h2>Tranfer Funds</h2>
-      <label for="from">From</label>
-      <select name="from" id="from">
-        <option value="#">Select..</option>
-        <option value="Income">Income</option>
-        <option value="Savings">Savings</option>
-      </select>
-      <label for="to">To</label>
-      <select name="top" id="to"></select>
-    </form>
   </div>
+
+  <form id="transfer">
+    <h2>Tranfer Funds</h2>
+    <label for="from">From</label>
+    <select name="from" id="from">
+      <option value="#">Select..</option>
+      <option value="Income">Income</option>
+      <option value="Savings">Savings</option>
+    </select>
+    <label for="to">To</label>
+    <select name="top" id="to"></select>
+  </form>
+
+  <script src="index.js"></script>
 </body>
 </html>
