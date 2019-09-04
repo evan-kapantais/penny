@@ -16,61 +16,130 @@
       <!-- <img src="img/LRG-DSC02096.JPG" alt="user portrait"> -->
     </div>
       <div class="user-text">
-      <h3>Evan Kapantais</h3>
+        <h3>Evan Kapantais</h3>
         <h4>evankapantais@gmail.com</h4>
       </div>
     </div>
-    <ul class="navbar">
-      <li>
-        <a href="#">
-          <i data-feather="clipboard"></i>
-          Dashboard</a>
-      </li>
-      <li>
-        <a href="investments.html">
-          <i data-feather="dollar-sign"></i>
-          Investments</a>
-      </li>
-      <li>
-        <a href="#">
-          <i data-feather="credit-card"></i>
-          Expenses</a>
-      </li>
-    </ul>
+    <div class="navbar">
+      <button type="button" class="nav-button">
+        <i data-feather="clipboard"></i>
+        <span>Dashboard</span>
+      </button>
+      <button type="button" class="nav-button">
+        <i data-feather="dollar-sign"></i>
+        <span>Investments</span>
+      </button>
+      <button type="button" class="nav-button">
+        <i data-feather="credit-card"></i>
+        <span>Expenses</span>
+      </button>      
+    </div>
   </nav>
 
   <main>
 
-    <!-- <header>
-      <h1>Penny</h1>
-    </header> -->
+    <div id="dashboard" class="tabcontent">
+      <h1>Dashboard</h1>
 
-    <div class="container">
+      <div class="summary">
+        <div class="card">
+          <span>Total Savings</span>
+          <span class="total-amount" id="total-savings">1600</span>
+        </div>
+        <div class="card">
+          <span>Total Investments</span>
+          <span class="total-amount" id="total-investments">460.188</span>
+        </div>
+        <div class="card">
+          <span>Total Equity Held</span>
+          <span class="total-amount" id="total-equity">612.87</span>
+        </div>
+        <div class="card">
+          <span>Net Working Capital</span>
+          <span class="total-amount" id="total-working">738.282</span>
+        </div>
+      </div>
+      <div class="container">
+        <table id="assets" class="table03">
+          <th>Assets BIE</th>
+          <tr>
+            <td>Savings</td>
+            <td></td>
+            <td class="value">1897.49</td>
+          </tr>
+          <tr>
+            <td>Income</td>
+            <td>Salary</td>
+            <td class="value">1806.98</td>
+          </tr>
+          <tr>
+            <td>Equity</td>
+            <td class="symbol" id="symbol01">Ttwo</td>
+            <td class="value" id="symbol01-value">612.87</td>
+          </tr>
+          <tr class="bottomline">
+            <td>Total Assets BIE</td>
+            <td></td>
+            <td class="value">4316.47</td>
+          </tr>
+        </table>
+        <table id="investment-deductions" class="table02">
+          <th>Investments Deductions</th>
+          <tr>
+            <td>Savings To Investments</td>
+            <td class="value">297.49</td>
+          </tr>
+          <tr>
+            <td>Income To Investments</td>
+            <td class="value">180.698</td>
+          </tr>
+          <tr class="bottomline">
+            <td>Working Capital BFE</td>
+            <td class="value">1626.282</td>
+          </tr>
+        </table>
+        <table id="fixed-expenses" class="table02">
+          <th>Fixed Expenses</th>
+          <tr>
+            <td>Rent</td>
+            <td class="value">825</td>
+          </tr>
+          <tr>
+            <td>Internet</td>
+            <td class="value">48</td>
+          </tr>
+          <tr>
+            <td>Telephony</td>
+            <td class="value">15</td>
+          </tr>
+          <tr class="bottomline">
+            <td>Total Fixed Expenses</td>
+            <td class="value">888</td>
+          </tr>
+        </table>
+        <table id="totals" class="table02">
+          <tr class="bottomline">
+            <td>Total Savings</td>
+            <td class="value">1600</td>
+          </tr>
+          <tr class="bottomline">
+            <td>Total Investments</td>
+            <td class="value">460.188</td>
+          </tr>
+          <tr class="bottomline">
+            <td>Total Equity Held</td>
+            <td class="value">612.87</td>
+          </tr>
+          <tr class="bottomline">
+            <td>Net Working Capital</td>
+            <td class="value">738.282</td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
-      <table id="assets" class="table03">
-        <th>Assets BIE</th>
-        <tr>
-          <td>Savings</td>
-          <td></td>
-          <td class="value">1897.49</td>
-        </tr>
-        <tr>
-          <td>Income</td>
-          <td>Salary</td>
-          <td class="value">1806.98</td>
-        </tr>
-        <tr>
-          <td>Equity</td>
-          <td class="symbol" id="symbol01">Ttwo</td>
-          <td class="value" id="symbol01-value">612.87</td>
-        </tr>
-        <tr class="bottomline">
-          <td>Total Assets BIE</td>
-          <td></td>
-          <td class="value">4316.47</td>
-        </tr>
-      </table>
-
+    <div id="investments" class="tabcontent">
+      <h1>Hey Investments</h1>
       <table id="investment-deductions" class="table02">
         <th>Investments Deductions</th>
         <tr>
@@ -87,48 +156,11 @@
         </tr>
       </table>
 
-      <table id="fixed-expenses" class="table02">
-        <th>Fixed Expenses</th>
-        <tr>
-          <td>Rent</td>
-          <td class="value">825</td>
-        </tr>
-        <tr>
-          <td>Internet</td>
-          <td class="value">48</td>
-        </tr>
-        <tr>
-          <td>Telephony</td>
-          <td class="value">15</td>
-        </tr>
-        <tr class="bottomline">
-          <td>Total Fixed Expenses</td>
-          <td class="value">888</td>
-        </tr>
-      </table>
-
-      <table id="totals" class="table02">
-        <tr class="bottomline">
-          <td>Total Savings</td>
-          <td class="value">1600</td>
-        </tr>
-        <tr class="bottomline">
-          <td>Total Investments</td>
-          <td class="value">460.188</td>
-        </tr>
-        <tr class="bottomline">
-          <td>Total Equity Held</td>
-          <td class="value">612.87</td>
-        </tr>
-        <tr class="bottomline">
-          <td>Net Working Capital</td>
-          <td class="value">738.282</td>
-        </tr>
-      </table>
-
     </div>
 
-    <form id="expense-form">
+    <div id="expenses" class="tabcontent">
+      <h1>Hey Expenses</h1>
+      <form id="expense-form">
       <h2>Add Expense</h2>
       <label for="type">
         <input type="text" placeholder="Type">
@@ -149,6 +181,11 @@
       <label for="to">To</label>
       <select name="top" id="to"></select>
     </form>
+    </div>
+
+    <div class="container">
+
+    </div>
 
   </main>
 

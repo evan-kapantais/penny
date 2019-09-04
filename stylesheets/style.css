@@ -13,6 +13,8 @@ a {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
 header {
@@ -66,52 +68,121 @@ nav .nav-header {
 }
 
 nav .nav-header .user-text {
-  margin-left: 20px;
+  margin-left: 10px;
+}
+
+nav .nav-header .user-text h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+nav .nav-header .user-text h4 {
+  font-size: .8rem;
 }
 
 nav .portrait {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   overflow: hidden;
   border-radius: 50%;
   background: url("../img/LRG-DSC02096.JPG") no-repeat center/cover;
 }
 
 nav .navbar {
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 100px;
+  width: 100%;
 }
 
-nav .navbar a {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto 1fr;
-      grid-template-columns: auto 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  justify-items: center;
+nav .navbar button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
-  padding: 20px 10px;
-  margin: 20px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  margin: 10px;
+  background: none;
+  border: none;
   border-radius: 5px;
-  text-transform: uppercase;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
 
-nav .navbar a:hover {
-  -webkit-transform: translateX(20px) scale(1.1);
-          transform: translateX(20px) scale(1.1);
-  background: pink;
+nav .navbar button span {
+  margin-left: 10px;
+}
+
+nav .navbar button:hover {
+  background: #fff;
+  -webkit-transform: translate(10px, -5px) scale(1.1);
+          transform: translate(10px, -5px) scale(1.1);
 }
 
 main {
-  padding: 40px;
-  margin-left: 300px;
+  margin-left: 272px;
+  height: 100vh;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.tabcontent h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#dashboard {
+  display: block;
+}
+
+.summary {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.summary .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 100px;
+  padding: 20px 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px #999;
+          box-shadow: 0 0 5px #999;
+}
+
+.summary .card span:nth-child(1) {
+  margin-bottom: 10px;
+}
+
+.summary .card .total-amount {
+  font-size: 2em;
 }
 
 .container {
