@@ -1,0 +1,24 @@
+{
+  "name": "penny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "feather-icons": "^4.24.1",
+    "sass": "^1.22.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evan-kapantais/penny.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evan-kapantais/penny/issues"
+  },
+  "homepage": "https://github.com/evan-kapantais/penny#readme"
+}
