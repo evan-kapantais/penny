@@ -1,4 +1,5 @@
 @import 'reset.scss';
+@import 'charts.scss';
 
 * {
   margin: 0;
@@ -88,12 +89,23 @@ nav {
 
       span {
         margin-left: 10px;
+        font-size: 1.5em;
       }
     }
 
     button:hover {
       background: #fff;
       transform: translate(10px, -5px) scale(1.1);
+    }
+
+    button:active {
+      outline: none;
+    }
+    
+    button.focused {
+      background: #fff;
+      transform: translate(10px, -5px) scale(1.1);
+      outline: none;
     }
   }
 }

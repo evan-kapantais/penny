@@ -121,12 +121,24 @@ nav .navbar button {
 
 nav .navbar button span {
   margin-left: 10px;
+  font-size: 1.5em;
 }
 
 nav .navbar button:hover {
   background: #fff;
   -webkit-transform: translate(10px, -5px) scale(1.1);
           transform: translate(10px, -5px) scale(1.1);
+}
+
+nav .navbar button:active {
+  outline: none;
+}
+
+nav .navbar button.focused {
+  background: #fff;
+  -webkit-transform: translate(10px, -5px) scale(1.1);
+          transform: translate(10px, -5px) scale(1.1);
+  outline: none;
 }
 
 main {

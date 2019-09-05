@@ -35,8 +35,6 @@ function showTab() {
   const tab = document.querySelector(`#${tabToShow}`);
 
   tab.style.display = "block";
-
-  console.log(tab);
 }
 
 // TODO: Format Numbers
@@ -93,4 +91,6 @@ navButtons.forEach(b => {
 
 function focusNavButton() {
 
+  navButtons.forEach(b => b.classList.remove("focused"));
+  this.classList.add("focused");
 }
