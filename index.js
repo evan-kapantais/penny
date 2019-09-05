@@ -1,7 +1,7 @@
 // Stocks API
 
 const key = "7VBLZ89I6SVAI9PE";
-const symbol01 = document.querySelector("#symbol01").innerText;
+const symbol01 = document.querySelector("#symbol01").innerText.toUpperCase();
 const symbol01Amount = 5.192;
 const symbolValue = document.querySelector("#symbol01-value");
 const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol01}&interval=10min&apikey=7VBLZ89I6SVAI9PE`;
@@ -9,8 +9,8 @@ const url = `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${sy
 fetch(url)
 .then(data => {return data.json()})
 .then(res => {
-  // console.log(res);
-  symbolValue.innerText = (parseFloat(res["Global Quote"]["05. price"]) * symbol01Amount).toFixed(3);
+  // symbolValue.innerText = (parseFloat(res["Global Quote"]["05. price"]) * symbol01Amount).toFixed(3);
+  console.log(res);
 });
 
 // Init Feather Icons
@@ -43,46 +43,6 @@ function showTab() {
 
 // TODO: Render Count Up
 
-// (function renderSavings() {
-//   let totalSavings = 1600,
-//   totalInvestments = 460.188,
-//   totalEquity = 612.87,
-//   totalWorking = 738.282;
-
-//   let savingsElem = document.querySelector("#total-savings");
-//   let InvestmentsElem = document.querySelector("#total-investments");
-//   let equityElem = document.querySelector("#total-equity");
-//   let workingElem = document.querySelector("#total-working");
-
-
-//   let savingsCount = 0;
-//   let investmentsCount = 0;
-//   let equityCount = 0;
-//   let workingCount = 0;
-
-//   setInterval(() => {
-//     if (savingsCount <= totalSavings) {
-//       savingsElem.innerText = savingsCount;
-//       savingsCount += 20;
-//     }
-//     if (investmentsCount <= Math.floor(totalInvestments)) {
-//       InvestmentsElem.innerText = investmentsCount;
-//       investmentsCount += 20;
-//     } else if (investmentsCount <= totalInvestments) {
-//       InvestmentsElem.innerText = investmentsCount;
-//       investmentsCount += .1;
-//     }
-//     if (equityCount <= totalEquity) {
-//       equityElem.innerText = equityCount;
-//       equityCount += 20;
-//     }
-//     if (workingCount <= totalWorking) {
-//       workingElem.innerText = workingCount;
-//       workingCount += 20;
-//     }  
-//   }, 20);
-// })();
-
 // Handle Nav Buttons
 
 navButtons.forEach(b => {
@@ -90,7 +50,34 @@ navButtons.forEach(b => {
 });
 
 function focusNavButton() {
-
   navButtons.forEach(b => b.classList.remove("focused"));
   this.classList.add("focused");
 }
+
+(function setActiveTab() {
+  navButtons[1].classList.add("focused");
+  document.querySelector("#investments").style.display = "block";
+})();
+
+var ctx = document.getElementById('ttwo-chart').getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['April', 'May', 'June', 'July', 'August', 'September'],
+        datasets: [{
+            label: 'Day',
+            data: [6, 2, 5, 3, 6, 9],
+            backgroundColor: [
+                'rgba(255, 99, 132, .2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+
+    }
+});

@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "chart.js": "^2.8.0",
     "feather-icons": "^4.24.1",
     "sass": "^1.22.10"
   },
