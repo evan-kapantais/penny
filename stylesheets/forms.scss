@@ -1,3 +1,60 @@
-form {
-  font-size: 1em;
+.form-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms ease-out;
+
+  h1 {
+    font-size: 3em;
+    font-weight: 300;
+  }
+
+  h3 {
+    margin-bottom: 60px;
+    font-size: 1em;
+    color: #333;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  form {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-input-wrapper {
+    position: relative;
+    margin-bottom: 70px;
+
+    input {
+      width: 100%;
+      padding: 5px 0;
+      position: absolute;
+      border: none;
+      border-bottom: 1px solid rgb(165, 165, 165);
+      text-transform: uppercase;
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: 200ms;
+      cursor: text;
+      user-select: none;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    .label-top {
+      font-size: .8em;
+      top: -20px;
+      color: grey;
+    }
+  }
 }

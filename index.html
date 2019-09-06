@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="stylesheets/style.css">
+  <link rel="stylesheet" href="stylesheets/forms.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <title>Penny</title>
   <script src="https://unpkg.com/feather-icons"></script>
@@ -138,42 +139,24 @@
       </div>
     </div>
 
-    <div id="investments" class="tabcontent">
+    <div id="investments" class="tabcontent no-overflow">
 
-      <div class="equity-wrapper">
-        <!-- <table id="equity-held-summary">
-        <thead>
-          <th>Symbol</th>
-          <th>Amount Held</th>
-          <th>Price</th>
-          <th>Price Total</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="symbol">Ttwo</td>
-            <td class="amount-held">5.1918</td>
-            <td class="price">133.25</td>
-            <td class="price-total">490</td>
-          </tr>
-        </tbody>
-        </table>
-        <div class="canvas-wrapper">
-          <canvas id="ttwo-chart" width="600"></canvas>
-        </div> -->
+      <div class="form-container">
+        <h1>Add A Symbol</h1>
+        <h3>Add a stock symbol and the amount<br> held to view details</h3>
+        <form id="add-stock">
+          <div class="form-input-wrapper">
+            <input id="symbol-input" type="text" required>
+            <label class="input-label" for="symbol-input">Symbol</label>
+          </div>
+          <div class="form-input-wrapper">
+            <input id="amount-input" type="number" step="0.01" required>
+            <label class="input-label" for="amount-input">Amount Held</label>
+          </div>
+          <button type="submit" class="btn-main">Add Symbol</button>
+        </form>
       </div>
 
-      <button type="button" class="btn-main">Add Symbol</button>
-
-      <form class="add-stock">
-        <div class="form-input">
-          <input type="text">
-          <span>Symbol</span>
-        </div>
-        <div class="form-input">
-          <input type="number" step="0.01">
-          <span>Amount Held</span>
-        </div>
-      </form>
 
 
     </div>
@@ -185,6 +168,8 @@
   </main>
 
   <script src="index.js"></script>
+  <script src="forms.js"></script>
+  <script src="navigation.js"></script>
   <script src="stocks.js"></script>
 </body>
 </html>

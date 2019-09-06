@@ -1,6 +1,7 @@
-@import 'reset.scss';
-@import 'charts.scss';
-@import 'forms.scss';
+@import 'reset';
+@import 'charts';
+@import 'forms';
+@import 'buttons';
 
 * {
   margin: 0;
@@ -10,15 +11,17 @@
   color: #333;
 }
 
-// * { background-color: rgba(255,0,0,.2); }
-// * * { background-color: rgba(0,255,0,.2); }
-// * * * { background-color: rgba(0,0,255,.2); }
-// * * * * { background-color: rgba(255,0,255,.2); }
-// * * * * * { background-color: rgba(0,255,255,.2); }
-// * * * * * * { background-color: rgba(255,255,0,.2); }
-// * * * * * * * { background-color: rgba(255,0,0,.2); }
-// * * * * * * * * { background-color: rgba(0,255,0,.2); }
-// * * * * * * * * * { background-color: rgba(0,0,255,.2); }
+/*
+* { background-color: rgba(255,0,0,.2); }
+* * { background-color: rgba(0,255,0,.2); }
+* * * { background-color: rgba(0,0,255,.2); }
+* * * * { background-color: rgba(255,0,255,.2); }
+* * * * * { background-color: rgba(0,255,255,.2); }
+* * * * * * { background-color: rgba(255,255,0,.2); }
+* * * * * * * { background-color: rgba(255,0,0,.2); }
+* * * * * * * * { background-color: rgba(0,255,0,.2); }
+* * * * * * * * * { background-color: rgba(0,0,255,.2); }
+*/
 
 .equity-wrapper {
   display: flex;
@@ -155,6 +158,10 @@ main {
   }
 }
 
+.no-overflow {
+  overflow-y: hidden;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
@@ -207,38 +214,5 @@ th {
   border: none;
 }
 
+//Investments Tab
 
-.form-input {
-  position: relative;
-  height: 60px;
-
-  input {
-    padding: 10px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid rgb(165, 165, 165);
-    text-transform: uppercase;
-  }
-
-  span {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    transition: 200ms;
-
-  }
-
-  input:focus ~ span {
-    font-size: .7em;
-    top: 10px;
-    color: grey;
-  }
-}
-
-form {
-  max-width: 200px;
-  display: flex;
-  flex-direction: column;
-}
