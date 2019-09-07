@@ -1,9 +1,10 @@
-.form-container {
+.first-stock-container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 999;
   transition: 500ms ease-out;
 
   h1 {

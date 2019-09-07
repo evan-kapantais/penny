@@ -32,7 +32,7 @@ function addNewSymbol(e) {
   const symbolValue = addSymbolForm.querySelector("#symbol-input").value.toUpperCase(),
   stockAmount = addSymbolForm.querySelector("#amount-input").value,
   investmentsTab = document.querySelector("#investments"),
-  firstSymbolContainer = document.querySelector(".form-container");
+  firstSymbolContainer = document.querySelector(".first-stock-container");
 
   setTimeout(() => {
     firstSymbolContainer.style.display = "none";

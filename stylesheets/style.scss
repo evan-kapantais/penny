@@ -2,6 +2,7 @@
 @import 'charts';
 @import 'forms';
 @import 'buttons';
+@import 'tables';
 
 * {
   margin: 0;
@@ -216,3 +217,31 @@ th {
 
 //Investments Tab
 
+.stock-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.stock-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.canvas-container {
+  position: relative;
+  width: 99%;
+}
+
+.stock-tables-container {
+  display: flex;
+
+  tr {
+    border-bottom: 1px solid red;
+  }
+
+  td {
+    text-align: right;
+  }
+}
